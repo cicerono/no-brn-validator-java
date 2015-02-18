@@ -11,8 +11,7 @@ public class NoBrnValidator {
 
     int checksum = calculateChecksum(brn.substring(0, 8));
 
-    if (checksum == -1
-      || checksum != Character.getNumericValue(brn.charAt(8))) {
+    if (checksum != Character.getNumericValue(brn.charAt(8))) {
       return false;
     }
 
